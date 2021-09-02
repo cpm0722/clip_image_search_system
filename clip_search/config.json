@@ -1,0 +1,117 @@
+{
+	"front": {
+		"address": "front.server.io",
+		"port": 80
+	},
+	"middle": {
+		"address": "middle.server.io",
+		"port": 8080
+	},
+	"inference": {
+		"address": "inference.server.io",
+		"port": 8081,
+		"model-url": {
+			"clip": "clip",
+			"mclip": "mclip"
+		}
+	},
+	"search": {
+		"server-list": [
+			{
+				"address": "search.server.index-0.io",
+				"port": 8000
+			},
+			{
+				"address": "search.server.index-1.io",
+				"port": 8001
+			},
+			{
+				"address": "search.server.index-2.io",
+				"port": 8002
+			},
+			{
+				"address": "search.server.index-3.io",
+				"port": 8003
+			},
+			{
+				"address": "search.server.index-4.io",
+				"port": 8004
+			},
+			{
+				"address": "search.server.index-5.io",
+				"port": 8005
+			},
+			{
+				"address": "search.server.index-6.io",
+				"port": 8006
+			},
+			{
+				"address": "search.server.index-7.io",
+				"port": 8007
+			},
+			{
+				"address": "search.server.index-8.io",
+				"port": 8008
+			},
+			{
+				"address": "search.server.index-9.io",
+				"port": 8009
+			},
+			{
+				"address": "search.server.index-10.io",
+				"port": 8010
+			},
+			{
+				"address": "search.server.index-11.io",
+				"port": 8011
+			},
+			{
+				"address": "search.server.index-12.io",
+				"port": 8012
+			},
+			{
+				"address": "search.server.index-13.io",
+				"port": 8013
+			},
+			{
+				"address": "search.server.index-14.io",
+				"port": 8014
+			},
+			{
+				"address": "search.server.index-15.io",
+				"port": 8015
+			},
+			{
+				"address": "search.server.index-16.io",
+				"port": 8016
+			},
+			{
+				"address": "search.server.index-17.io",
+				"port": 8017
+			},
+			{
+				"address": "search.server.index-18.io",
+				"port": 8018
+			},
+			{
+				"address": "search.server.index-19.io",
+				"port": 8019
+			},
+			{
+				"address": "search.server.index-20.io",
+				"port": 8020
+			}
+		],
+		"inner-port": 8000,
+		"ef-search": 300
+	},
+	"prepare": {
+		"dir-path": {
+			"embedding-dir": "~/clip_data/embedding",
+			"index-dir": "~/clip_data/index",
+			"path-dir": "~/clip_data/path",
+			"hash-dir": "~/clip_data/hash"
+		},
+		"feature-dim": 640
+	}
+}

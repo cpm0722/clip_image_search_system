@@ -1,0 +1,10 @@
+nohup.out
+*.pt
+*.pkl
+*.mar
+/**/snapshots
+/**/logs
+__pycache__/
+.ipynb_checkpoints
+.core*
+.nfs*
