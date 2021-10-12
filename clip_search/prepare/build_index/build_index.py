@@ -87,6 +87,8 @@ if __name__ == "__main__":
     parser = get_parser()
     args = parser.parse_args()
 
+    os.makedirs(args.log_dir, exist_ok=True)
+
     index_file_path = os.path.join(INDEX_DIR, f"{args.index:03d}.pt")
     if os.path.isfile(index_file_path):
         logging.error(f"{index_file_path} is already exists!")

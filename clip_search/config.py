@@ -25,6 +25,10 @@ SEARCH_SERVER = config['search']['server-list']
 PORT_SEARCH = config['search']['inner-port']
 EF_SEARCH = config['search']['ef-search']
 
+# image
+ADDR_IMAGE = config['image']['address']
+PORT_IMAGE = config['image']['port']
+
 # prepare
 INDEX_DIR = config['prepare']['dir-path']['index-dir']
 PATH_DIR = config['prepare']['dir-path']['path-dir']

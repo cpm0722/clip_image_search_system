@@ -2,7 +2,7 @@ import os
 import sys
 import time
 import argparse
-import loggging
+import logging
 import itertools
 import multiprocessing as mp
 from concurrent.futures import ThreadPoolExecutor
@@ -333,6 +333,7 @@ if __name__ == "__main__":
     Image.MAX_IMAGE_PIXELS = None  # Read Big Size Images
     Image.warnings.filterwarnings("ignore", "(Possibly )?corrupt EXIF data", UserWarning) # Ignore EXIF warning
 
+    os.makedirs(args.log_dir, exist_ok=True)
     os.makedirs(os.path.join(EMBEDDING_DIR, args.dataset), exist_ok=True)
 
     if not os.path.isfile(args.path_file):

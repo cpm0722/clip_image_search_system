@@ -13,7 +13,7 @@ from PIL import Image
 import imagehash
 import n2
 
-from clip_search.config import FEATURE_DIM, INDEX_DIR, PATH_DIR, HASH_DIR, EMBEDDING_DIR
+from clip_search.config import FEATURE_DIM, INDEX_DIR, PATH_DIR, HASH_DIR, EMBEDDING_DIR, ADDR_IMAGE, PORT_IMAGE
 
 
 def measure_elapsed_time(func, func_str, ms=True):
@@ -171,7 +171,7 @@ def convert_path_to_url(path):
     root_path = ""
     dataset, *keys = path.split('/')
 
-    web_prefix = "http://example.web.storage.com/image_path=/dataset"
+    web_prefix = f"{ADDR_IMAGE}:{PORT_IMAGE}/dataset"
     s3_prefix = "https://s3-us-east-2.amazonaws.com"
     if dataset == "CC12M":
         dataset_path = os.path.join(web_prefix, "CC12M")

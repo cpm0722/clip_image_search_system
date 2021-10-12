@@ -105,6 +105,10 @@
 		"inner-port": 8000,
 		"ef-search": 300
 	},
+	"image": {
+		"address": "http://14.49.45.213",
+		"port": 7000
+	},
 	"prepare": {
 		"dir-path": {
 			"embedding-dir": "~/clip_data/embedding",
