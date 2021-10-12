@@ -83,8 +83,8 @@ class ShardManager:
         return sorted_score[:k], sorted_url[:k], sorted_dataset[:k], sorted_index[:k]
 
 # search for images similar to text query
-@app.route("/search", methods=(["POST"]))
-def search():
+@app.route("/searches/text-to-images", methods=(["POST"]))
+def search_text2img():
     # load shard manager
     shard_manager = g.get("shard_manager", None)
     if shard_manager is None:
@@ -131,7 +131,7 @@ def search():
             return {}, status_code
 
     # send request to search server with shard manager
-    score, path, dataset, index = shard_manager.request('/search', response.json()['feature'], k)
+    score, path, dataset, index = shard_manager.request('/searches/text-to-images', response.json()['feature'], k)
 
     return {'score': score, 'path': path, 'dataset': dataset, 'index': index}
 

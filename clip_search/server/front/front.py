@@ -19,8 +19,8 @@ def index():
 
 
 # search for images similar to text queries
-@app.route("/search", methods=(["POST"]))
-def search():
+@app.route("/searches/text-to-images", methods=(["POST"]))
+def search_text2img():
     # request from front-end
     request_text = request.get_json()['input_text']
     k = request.get_json()['k']
@@ -28,7 +28,7 @@ def search():
 
     try:
         logging.info(f"input_text: {request_text}, k: {k}, mclip: {mclip}")
-        response = requests.post(f"http://{ADDR_MIDDLE}:{PORT_MIDDLE}/search", json={'input_text': request_text, 'k': k, 'mclip': mclip})
+        response = requests.post(f"http://{ADDR_MIDDLE}:{PORT_MIDDLE}/searches/text-to-images", json={'input_text': request_text, 'k': k, 'mclip': mclip})
     except:  # middle server error
         logging.error("middle response 500 error")
         status_code = 500

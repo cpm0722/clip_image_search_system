@@ -27,8 +27,8 @@ def search_HNSW(query, k):
 
 
 # search for vectors similar to query(vector or id)
-@app.route("/search", methods=(["POST"]))
-def search():
+@app.route("/searches/text-to-images", methods=(["POST"]))
+def search_text2img():
     # request from middle
     query = request.get_json()['query']
     k = request.get_json()['k']
