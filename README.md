@@ -8,6 +8,11 @@ image dataset은 imagenet21k, CC12M, openimages 등 public dataset에 더해 web
 이 때, Sharding을 구현해 다수의 server에 data를 분산 저장함으로써 대규모 data에 대해서도 균등한 성능을 유지합니다.  
 최종적으로 **300ms** 미만의 latency, **95%** 이상의 recall을 보장합니다.  
 
+### Demo
+
+[DEMO Web Page](http://clip.cpm9662.me)에서 실행을 해 볼 수 있습니다.  
+[Openimages v6](https://opensource.google/projects/open-images-dataset)를 사용해 약 2M개의 image에 대한 검색을 수행합니다.  
+
 ### Example
 몇몇 예제 query에 대한 검색 결과입니다.  
 
