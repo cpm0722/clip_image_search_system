@@ -4,11 +4,10 @@ import logging
 import requests
 import multiprocessing as mp
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, make_response
 
 import clip_search.utils
 from clip_search.config import PORT_FRONT, ADDR_MIDDLE, PORT_MIDDLE
-
 
 app = Flask(__name__)
 
@@ -22,6 +21,7 @@ def index():
 @app.route("/searches/text-to-images", methods=(["POST"]))
 def search_text2img():
     # request from front-end
+    print(request.get_json())
     request_text = request.get_json()['input_text']
     k = request.get_json()['k']
     mclip = request.get_json()['mclip']
@@ -41,6 +41,7 @@ def search_text2img():
         if status != 2 and status != 3:
             logging.error(f"middle response error {status_code}")
             return {}, status_code
+
     return response.json(), status_code
 
 
